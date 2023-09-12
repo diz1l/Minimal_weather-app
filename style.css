@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@200&family=Montserrat:wght@200;400;600&family=The+Nautigal:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  :root {
+    --color1: rgb(85, 95, 129);
+    --color2: rgb(48, 57, 93);
+    --color3: rgb(39, 97, 180);
+    --White: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+}
+
+body {
+    background-color: var(--color1);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contayner {
+    height: 400px;
+    background-color: var(--color2);
+    color: var(--White);
+    border-radius: 25px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.35);
+}
+
+.left-info {
+    width: 260px;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    background: url("/img/beautiful-sunny-weather.jpg");
+    background-position: center;
+    background-size: cover;
+    transform: scale(1.03) perspective(200px);
+    cursor: pointer;
+    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.left-info:hover{
+    transform: scale(1.1) perspective(2500px) rotateY(5deg);
+}
+
+.pic_gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, #5c6bc0 10%, #0d47a1 100%);
+    border-radius: 25px;
+    opacity: 0.5;
+}
+
+.today_info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+}
+
+.today_weather {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    bottom: 20px;
+    left: 20px;
+}
+
+.today_weather .bx{
+    /* .bx это иконка */
+    font-size: 4.6rem;
+}
+
+.weather_temp {
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+
+.right_info {
+    float: right;
+    position: relative;
+    height: 100%;
+    padding-top: 25px;
+}
+
+.day_info {
+    padding: 25px 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* div:not(:last-child) - это часть селектора, которая выбирает все <div>,
+которые не являются последними дочерними элементами своего родительского
+ контейнера .day-info. */
+
+.day_info div:not(:last-child){
+    margin-bottom: 6px;
+}
+
+/* Таким образом, CSS ищет элементы с классами .title и .value 
+внутри <div>, которые сами находятся внутри .day_info и 
+применяет указанные стили к этим элементам. */
+
+.day_info div .title{
+    font-weight: 700;
+}
+
+.day_info div .value{
+    float: right;
+}
+
+.day_list {
+    display: flex;
+    list-style: none;
+    margin: 10px 35px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    border-radius: 10px;
+}
+
+.day_list li {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.day_list li .bx{
+    margin-bottom: 5px;
+    font-size: 2rem;
+}
+
+.day_list li:hover {
+    transform: scale(1.1);
+    background-color: var(--White);
+    color: var(--black);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+}
+
+/* ///////////// */
+.day_list li .day-temp{
+    margin-top: 6px;
+    font-weight: 700;
+}
+
+.btn_contayner{
+    padding: 25px 35px;
+}
+
+.loc_btn{
+    outline: none;
+    width: 100%;
+    border: none;
+    font-weight: 700;
+    border-radius: 25px;
+    padding: 10px;
+    background: var(--color2);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s ease;
+}
+
+.loc_btn:hover{
+    background: var(--White);
+    color: var(--black);
+}
